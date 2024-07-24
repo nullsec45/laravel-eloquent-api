@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $table="categories",
-              $primaryKey="id",
-              $keyType="int",
-              $incrementing=true,
-              $timestamps=true;
+    public $table="categories",
+           $incrementing=true,
+           $timestamps=true;
+
+    protected $primaryKey="id",
+              $keyType="int";
+       
 }
