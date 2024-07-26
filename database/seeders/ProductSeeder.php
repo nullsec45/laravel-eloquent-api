@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Category;
 
 class ProductSeeder extends Seeder
 {
@@ -12,6 +13,15 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Category::all()->each(function(Category $category){
+
+            // dd($category->products->price);
+            for($i=0;$i < 5;$i++){
+                $category->products()->create([
+                    "name" => "Product $i of category $category->name",
+                    "price" => rand(100, 1000)
+                ]);
+            }
+        });
     }
 }
