@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
 
 
 /*
@@ -19,5 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/api/categories/{id}', [CategoryController::class,'show']);
-Route::get('/api/categories', [CategoryController::class,'index']);
+
