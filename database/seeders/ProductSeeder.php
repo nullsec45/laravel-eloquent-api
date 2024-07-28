@@ -14,8 +14,6 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         Category::all()->each(function(Category $category){
-
-            // dd($category->products->price);
             for($i=0;$i < 5;$i++){
                 $category->products()->create([
                     "name" => "Product $i of category $category->name",
