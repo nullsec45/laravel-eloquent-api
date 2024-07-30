@@ -21,4 +21,8 @@ class ProductCollection extends ResourceCollection
             "data" => ProductResource::collection($this->collection)
         ];
     }
+
+    public function withReponse(Request $request, JsonReponse $response){
+        $response->header("X-Powered-By","Fajar");
+    }
 }
