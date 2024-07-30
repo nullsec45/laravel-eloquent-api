@@ -27,3 +27,5 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{id}', [ProductController::class,'show']);
 
 Route::get('/products-paging', [ProductController::class,'paging']);
+
+Route::get('/products-debug/{id}',[ProductController::class, 'productDebug']);
